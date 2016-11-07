@@ -5,6 +5,14 @@
 
 <h2>Novo Produto</h2>
 
+@if(TempData["success"] != null)
+{
+    <div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Produto salvo com sucesso.
+    </div>
+}
+
 @using(@Html.BeginForm()){
     <div class="form-group">
         @Html.LabelFor(p => p.Titulo)
